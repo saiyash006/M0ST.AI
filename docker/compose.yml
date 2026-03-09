@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  spider:
+    build:
+      context: ..
+      dockerfile: docker/backend.Dockerfile
+    environment:
+      # LLM config (set your provider + key here)
+      LLM_PROVIDER: "none"
+      # OPENAI_API_KEY: ""
+      # ANTHROPIC_API_KEY: ""
+    volumes:
+      - ../tests/binaries:/app/binaries:ro
+      - spider_data:/app/storage
+    stdin_open: true
+    tty: true
+
+volumes:
+  spider_data:

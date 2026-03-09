@@ -1,0 +1,33 @@
+# Core (always required)
+PyYAML
+networkx
+pygments
+
+# Static analysis (optional - requires radare2 installed)
+r2pipe
+
+# Constraint solving (optional - graceful fallback)
+z3-solver
+
+# Dynamic tracing (optional - requires GDB installed)
+pygdbmi
+
+# Web API (optional - only needed for web frontend)
+fastapi
+uvicorn
+
+# ── AI / ML dependencies (optional - graceful fallback to classical) ──
+
+# LLM providers (install the ones you use)
+openai>=1.0           # OpenAI + local/Ollama via compatible API
+anthropic>=0.20       # Anthropic Claude
+mistralai>=0.1        # Mistral AI
+
+# GNN / deep learning (optional - falls back to manual features)
+torch>=2.0
+torch-geometric>=2.4
+torch-scatter
+torch-sparse
+
+# Numerical
+numpy
